@@ -30,6 +30,7 @@ public class App {
     }
 
     public static void main(String[] args) {
+	System.out.println("Login:");
         Scanner sc = new Scanner(System.in);
         GestorProductos gp = new GestorProductos(sc);
         while (!bienvenida(sc)) {
