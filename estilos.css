@@ -1,0 +1,599 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/*---------------GENERALES---------------*/
+/*Estilo de las fuentes en diferentes etiquetas*/
+body {
+    font-family: "Montserrat", serif;
+}
+
+h1 {
+    font-size: 32pt;
+    font-weight: 800;
+    text-transform: uppercase;
+    margin-bottom: 40px;
+}
+
+h2 {
+    font-size: 28pt;
+    font-weight: 600;
+    font-style: italic;
+    text-transform: capitalize;
+    margin: 40px 0 20px 0;
+}
+
+h3 {
+    font-size: 24pt;
+    font-weight: 500;
+    margin: 35px 0 15px 0;
+}
+
+h4{
+    font-size: 14pt;
+    font-weight: 500;
+    margin: 15px 0 20px 0;
+    text-transform: capitalize;
+}
+
+p {
+    font-size: 12pt;
+    font-weight: 450;
+    line-height: 1;
+    margin-bottom: 15px;
+}
+
+/*Medida para todos los iconos*/
+.icono {
+    width: 35px;
+}
+
+/*Estilo de los enlaces*/
+a {
+    text-decoration: none;
+    color: black;
+}
+
+/*Estilo de las listas*/
+ul {
+    list-style: none;
+}
+
+main{
+    margin: 170px auto 50px auto;
+    width: 90%;
+}
+
+/*Formularios*/
+.formulario input{
+    border: #dddddd 1px solid;
+    padding: 10px;
+    border-radius: 5px;
+    margin: 10px 0 30px 0;
+    width: 100%;
+    color: black;
+    font-size: 12pt;
+}
+.formulario-2-columnas{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-end;
+}
+.formulario-2-columnas > div{
+    display: flex;
+    flex-direction: column;
+    width: 48%;
+}
+
+.formulario .boton{
+    color: #dddddd;
+}
+
+/*Formularios Responsive*/
+@media all and (max-width: 400px) {
+    .formulario-2-columnas{
+        flex-direction: column;
+    }
+    .formulario-2-columnas > div{
+        width: 100%;
+    }
+}
+
+/*Botones*/
+.boton{
+    border-radius: 5px;
+    background-color: #2A0ADE;
+    color: #dddddd;
+    padding: 10px 40px;
+    border: none;
+    font-size: 12pt;
+    font-weight: 450;
+    line-height: 1;
+} .boton:hover{
+    border-radius: 5px;
+    border: 2px solid #2A0ADE;
+    background-color: #dddddd;
+    color: #2A0ADE;
+}
+
+.boton2{
+    border-radius: 5px;
+    border: 2px solid #2A0ADE;
+    background-color: #dddddd;
+    color: #2A0ADE;
+} .boton2:hover{
+    border-radius: 5px;
+    border: none;
+}
+
+/*---------------MENU NAVEGACIÓN---------------*/
+header {
+    width: 100%;
+    height: 120px;
+    background-color: #dddddd;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    z-index: 998;
+    top: 0;
+}
+
+.menu-navegacion {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 90%;
+    position: fixed;
+    z-index: 999;
+}
+
+.menu-nav_logo > a {
+    display: flex;
+    align-items: center;
+}
+
+.menu-nav_logo .icono{
+    margin-right: 10px;
+}
+
+ul.menu-nav_paginas {
+    display: flex;
+    align-items: center;
+}
+
+nav > ul > li {
+    margin-left: 15px;
+    text-align: center;
+}
+
+.menu-nav_paginas > li > a:hover {
+    font-size: 14pt;
+    transition: all 0.3s;
+}
+
+.menu-nav_paginas img {
+    width: 25px;
+}
+
+.menu-hamb, .cerrar-menu-hamb {
+    display: none;
+}
+
+/*Menu Navegación Responsive*/
+@media all and (max-width:700px) {
+    .menu-hamb, .cerrar-menu-hamb {
+        display: block;
+        border: 0;
+        background-color: transparent;
+    }
+
+    nav {
+        opacity: 0;
+        visibility: hidden;
+        position: fixed;
+        padding: 40px 60px 20px 60px;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        display: flex;
+        flex-direction: column;
+        align-items: end;
+        background-color: #dddddd;
+    }
+
+    nav.visible {
+        opacity: 1;
+        visibility: visible;
+        padding: 40px 20px 20px 60px;
+    }
+
+    ul.menu-nav_paginas {
+        flex-direction: column;
+        align-items: end;
+    }
+
+    .menu-nav_paginas>li {
+        margin: 5px 0;
+    }
+}
+
+@media all and (max-width: 400px) {
+    nav.visible {
+        padding: 40px 18px 20px 50px;
+    }
+}
+
+/*---------------PÁGINA INDEX---------------*/
+.index-informacion{
+    width: 50vw;
+}
+
+.productos-relevantes .producto{
+    margin:0 4% 0 0;
+}
+
+#productos-index{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    width: 100%;
+    margin-top: 30px;
+}
+
+/*Formulario*/
+.formulario-mensaje{
+    border: #dddddd 2px solid;
+    padding: 30px 20px;
+    border-radius: 15px;
+}
+
+/*Página Index Responsive*/
+@media all and (max-width:700px) {
+    .index-informacion{
+        width: 100%;
+    }    
+}
+
+/*---------------PÁGINA PRODUCTOS---------------*/
+
+.categorias{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+#productos{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    width: 100%;
+    margin-top: 30px;
+}
+
+#pantalon, #camiseta, #sudadera, #camisa, #chaqueta{
+    display: none;
+}
+
+.producto{
+    display: flex;
+    flex-direction: column;
+    width: 28%;
+    margin: 0 2%;
+}
+
+.contenedor-imagen{
+	width: 250px;
+	height: 350px;
+	position: relative;
+	overflow: hidden;
+}
+
+.contenedor-imagen > img{
+	width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.producto h2{
+    margin-bottom: 10px;
+}
+
+.producto h3{
+    margin-top: 5px;
+}
+
+.producto button{
+    margin-bottom: 50px;
+}
+
+/*Página Productos Responsive*/
+@media all and (max-width: 900px){
+    .producto{
+        width: 45%;
+    }
+}
+@media all and (max-width: 600px){
+    .producto{
+        width: 100%;
+    }
+}
+
+/*---------------PÁGINA PRODUCTO---------------*/
+#informacion-producto > div{
+    display: flex;
+}
+
+#informacion-producto img{
+    width: 300px;
+    height: auto;
+}
+
+#informacion-producto > div > div{
+    margin-left: 80px;
+}
+
+.agregarAlCarrito > a{
+    color: #dddddd;
+}.agregarAlCarrito > a:hover{
+    color: #2A0ADE;
+}
+
+/*Página Producto Responsive*/
+@media all and (max-width: 700px){
+    #informacion-producto > div{
+       flex-direction: column;
+    }
+    #informacion-producto img{
+        width: 200px;
+        height: auto;
+    }
+    #informacion-producto > div > div{
+        margin:30px 0 0;
+    }
+}
+
+
+/*---------------PÁGINA ESTADÍSTICAS---------------*/
+.pagina-estadisticas{
+    display: grid;
+    grid-template-areas: 
+    'ganancias quinientos' 
+    'clientes clientes' 
+    'stock nunca' 
+    'ganancias-meses ganancias-meses';
+}
+
+.pagina-estadisticas > div{
+    margin-bottom: 40px;
+}
+
+.ganancias{
+    grid-area: ganancias;
+}
+
+.quinientos{
+    grid-area: quinientos;
+}
+
+.clientes{
+    grid-area: clientes;
+}
+
+#clientes_mas_pedidos{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+#clientes_mas_pedidos > h3{
+    width: 30%;
+    margin: 10px 0;
+}
+
+.nunca{
+    grid-area: nunca;
+}
+
+.ganancias-meses{
+    grid-area: ganancias-meses;
+}
+
+/*Gráfico de ganancias por meses*/
+#grafico-meses{
+    max-width: 100%;
+}
+
+/*Página Estadísticas Responsive*/
+@media all and (max-width: 900px){
+    .pagina-estadisticas{
+        display: flex;
+        flex-direction: column;
+    }
+}
+
+@media all and (max-width: 700px){
+    #clientes_mas_pedidos > h3{
+        width: 50%;
+    }
+}
+
+@media all and (max-width: 400px){
+    #clientes_mas_pedidos > h3{
+        width: 100%;
+    }
+}
+
+/*---------------PÁGINA CARRITO---------------*/
+.producto-carrito{
+    display: flex;
+    flex-direction: row;
+    align-items: flex-end;
+}
+
+.producto-carrito > div{
+    display: flex;
+    flex-direction: column;
+}
+
+.producto-carrito h3{
+    margin-top: 20px;
+}
+
+.producto-carrito img{
+    width: 200px;
+}
+
+.producto-carrito > div:nth-child(2){
+    margin-top: 20px;
+}
+
+.total-carrito{
+    margin-top: 60px;
+}
+
+.total-carrito > h2{
+    margin: 10px 0;
+}
+
+.botonVaciar{
+    margin-bottom: 40px;
+}
+
+.carrito-datos{
+    width: 50vw;
+}
+
+/*Formulario*/
+.formulario-carrito input{
+    border: #dddddd 1px solid;
+    padding: 10px;
+    border-radius: 5px;
+    margin: 10px 0 30px 0;
+    width: 100%;
+    color: black;
+    font-size: 12pt;
+}
+
+.formulario-botones > input{
+    width: 48%;
+}
+
+.formulario-botones > input:first-child{
+    color: #dddddd;
+} .formulario-botones > input:first-child:hover{
+    color: #2A0ADE;
+}
+
+.formulario-botones > input:nth-child(2){
+    color: #2A0ADE;
+    border-radius: 5px;
+    border: 2px solid #2A0ADE;
+    background-color: #dddddd;
+} .formulario-botones > input:nth-child(2):hover{
+    border-radius: 5px;
+    border: none;
+
+}
+
+/*Página Carrito Responsive*/
+@media all and (max-width: 700px) {
+    .carrito-datos{
+        width: 100%;
+    }    
+}
+
+@media all and (max-width: 500px){
+    .producto-carrito{
+        flex-direction: column;
+        align-items: flex-start;
+    }
+}
+
+@media all and (max-width: 400px) {
+    .formulario-botones > input{
+        width: 100%;
+        margin-bottom: 10px;
+    }
+
+    .botonVaciar{
+        width: 100%;
+    }
+
+    .total-carrito{
+        margin-top: 40px;
+    }
+}
+
+/*---------------FOOTER---------------*/
+footer{
+    background-color: #dddddd;
+    padding: 50px 0;
+}
+
+footer > section{
+    width: 90%;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    margin: auto;
+}
+
+.footer-informacion{
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 30px;
+}
+
+.footer-logo > a{
+    display: flex;
+    align-items: center;
+}
+
+.footer-logo .icono{
+    margin-right: 10px;
+}
+.footer-info > li{
+    margin-bottom: 10px;
+}
+
+.footer-info > li > a > img{
+    margin-right: 5px;
+}
+
+.footer-legal{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 80%;
+    margin: auto;
+}
+
+.footer-legal > p{
+    font-size: 10pt;
+}
+
+/*Footer Responsive*/
+@media all and (max-width:700px) {
+    .footer-legal{
+        width: 90%;
+        text-align: center;
+    }
+}
+
+@media all and (max-width: 400px) {
+    .footer-informacion{
+        flex-direction: column;
+    }
+    .footer-logo{
+        margin-bottom: 40px;
+    }
+    .footer-legal{
+        flex-direction: column;
+        align-items: flex-start;
+        width: 100%;
+    }
+}

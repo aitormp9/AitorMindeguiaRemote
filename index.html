@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta name="keywords" content="usurbil, ropa, pantalones, camisetas, sudaderas, camisas, chaquetas, usurbiltex">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8">
+
+    <!--Google Fonts - Fuente Montserrat-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap">
+
+    <!--info + icono pestaña-->
+    <title>UsurbilTex</title>
+    <link rel="icon" href="img/icono-usurbiltex.png">
+
+    <!--Enlace con CSS-->
+    <link rel="stylesheet" href="css/estilos.css" type="text/css">
+</head>
+
+<body>
+    <!------------------------------- HEADER ----------------------------------->
+    <header>
+        <div class="menu-navegacion">
+            <div class="menu-nav_logo"><a href="index.html"><img class="icono" src="img/icono-usurbiltex.png" alt="UsurbilTex"><strong>UsurbilTex</strong></a></div>
+            <button class="menu-hamb" id="abrir"><img class="icono" src="img/menu.png" alt="icono menu"></button>
+            <nav id="nav">
+                <button class="cerrar-menu-hamb" id="cerrar"><img class="icono" src="img/close.png"
+                        alt="icono cerrar menu"></button>
+                <ul class="menu-nav_paginas">
+                    <li><a href="index.html"><strong>INICIO</strong></a></li>
+                    <li><a href="productos.html">PRODUCTOS</a></li>
+                    <li><a href="estadisticas.html">ESTADÍSTICAS</a></li>
+                    <li><a href="carrito.html"><img class="icono" src="img/carrito.png" alt="carrito"></a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-----------------------------------MAIN----------------------------------->
+    <main>
+       <section class="productos-relevantes">
+            <h2>Productos Relevantes</h2>
+            <div id="productos-index">
+                <!--Mediante el JS se añaden 3 productos más relevantes-->
+            </div>
+        </section>
+
+        <section class="index-informacion">
+            <!--Información sobre UsurbilTex-->
+            <h2>UsurbilTex</h2>
+            <div>
+                <p>Descubre en UsurbilTex las últimas tendencias en moda para hombres, mujeres y niños. Nuestra tienda online te ofrece una amplia selección de prendas de calidad, con diseños modernos y precios accesibles.</p>
+                <p>Compra de forma fácil y segura desde cualquier lugar y recibe tus productos en la puerta de tu casa.</p>
+            </div>
+            
+            <!--Formulario para ponerse en contacto con UsurbilTex-->
+            <h3>¡Estamos para ayudarte!</h3>
+            <form class="formulario formulario-mensaje">
+                <label for="nombre">Nombre:</label><br>
+                <input type="text" id="nombre" name="nombre" placeholder="Escriba su nombre">
+                <div class="formulario-2-columnas">
+                    <div>
+                        <label for="apellido1">Primer Apellido:</label>
+                        <input type="text" id="apellido1" name="apellido1" placeholder="Escriba su primer apellido">
+                    </div>
+                    <div>
+                        <label for="apellido2">Segundo Apellido:</label>
+                        <input type="text" id="apellido2" name="apellido2" placeholder="Escriba su segundo apellido">
+                    </div>
+                </div>
+                <label for="email">Email:</label><br>
+                <input type="text" id="email" name="email" placeholder="email@dominio.eus">
+                <br>
+                <label for="mensaje">Mensaje:</label><br>
+                <input type="text" id="mensaje" name="mensaje" placeholder="Escribe su mensaje..."><br>
+                <input type="submit" class="boton">
+            </form> 
+        </section>
+    </main>
+
+    <!-----------------------------------FOOTER----------------------------------->
+    <footer>
+        <section>
+            <div class="footer-informacion">
+                <div class="footer-logo">
+                    <a href="index.html"><img class="icono" src="img/icono-usurbiltex.png" alt="UsurbilTex"><strong>UsurbilTex</strong></a>
+                </div>
+                <!--Datos de contacto-->
+                <div>
+                    <ul class="footer-info">
+                        <li><a href="https://instagram.com" target="_blank"><img src="img/instagram.png" alt="icono instagram" width="15">Instagram</a></li>
+                        <li><a href="tel:+34943364600">Teléfono</a></li>
+                        <li><a href="mailto:info@usurbiltex.eus">Email</a></li>
+                        <li><a href="https://maps.app.goo.gl/rK7AozFXygumUXkG8" target="_blank">Localización</a></li>
+                    </ul>
+                </div>
+            </div>
+            <!--Textos legales-->
+            <div class="footer-legal">
+                <p><a href="#">Aviso Legal</a></p>
+                <p><a href="#">Política de privacidad</a></p>
+                <p><a href="#">Política de cookies</a></p>
+                <p><a href="https://creativecommons.org/" target="_blank">(CC) Creative Commons</a></p>
+            </div>
+        </section>
+    </footer>
+
+    <!--Enlaces con JS, llamada a la función de cargar productos al cargar la página-->
+    <script src="js/javascript.js" onload="productosIndex()"></script>
+</body>
+</html> 
