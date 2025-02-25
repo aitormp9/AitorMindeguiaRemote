@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta name="keywords" content="usurbil, ropa, pantalones, camisetas, sudaderas, camisas, chaquetas, usurbiltex">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta charset="UTF-8">
+
+        <!--Google Fonts - Fuente Montserrat-->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+
+        <!--info + icono pestaña-->
+        <title>UsurbilTex</title>
+        <link rel="icon" href="img/icono-usurbiltex.png">
+
+        <!--Enlace con CSS-->
+        <link rel="stylesheet" href="css/estilos.css" type="text/css">
+    </head>
+    <body>
+        <!-----------------------------------HEADER----------------------------------->
+        <header>
+            <div class="menu-navegacion"> 
+                <div class="menu-nav_logo"><a href="index.html"><img class="icono" src="img/icono-usurbiltex.png" alt="UsurbilTex"><strong>UsurbilTex</strong></a></div>
+                <button class="menu-hamb" id="abrir"><img class="icono" src="img/menu.png" alt="icono menu"></button>
+                <nav id="nav">
+                    <button class="cerrar-menu-hamb" id="cerrar"><img class="icono" src="img/close.png" alt="icono cerrar menu"></button>
+                    <ul class="menu-nav_paginas">
+                        <li><a href="index.html">INICIO</a></li>
+                        <li><a href="productos.html"><strong>PRODUCTOS</strong></a></li>
+                        <li><a href="estadisticas.html">ESTADÍSTICAS</a></li>
+                        <li><a href="carrito.html"><img class="icono" src="img/carrito.png" alt="carrito"></a></li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+
+        <!-----------------------------------MAIN----------------------------------->
+        <main>
+            <section>
+                <!--Opción de volver atras para ver todos los productos-->
+                <p><a href="productos.html">&lt; Ver todos los productos</a></p>
+            </section>
+
+            <!--Sección de información que rellenaremos mediante el JS con los datos del JSON-->
+            <section id="informacion-producto">
+                <h2 id="nombre-prod"></h2>
+                <div>
+                    <img id="imagen-prod" src="" alt="">
+                    <div>
+                        <p id="descripcion-prod"></p>
+                        <p id="precio-prod"></p>
+                        <p id="stock"></p>
+                        <button class="boton agregarAlCarrito">Añadir al carrito</button>
+                    </div>
+                </div>
+            </section>    
+        </main>
+
+    <!-----------------------------------FOOTER----------------------------------->
+    <footer>
+        <section>
+            <div class="footer-informacion">
+                <div class="footer-logo">
+                    <a href="index.html"><img class="icono" src="img/icono-usurbiltex.png" alt="UsurbilTex"><strong>UsurbilTex</strong></a>
+                </div>
+                <!--Datos de contacto-->
+                <div>
+                    <ul class="footer-info">
+                        <li><a href="https://instagram.com" target="_blank"><img src="img/instagram.png" alt="icono instagram" width="15">Instagram</a></li>
+                        <li><a href="tel:+34943364600">Teléfono</a></li>
+                        <li><a href="mailto:info@usurbiltex.eus">Email</a></li>
+                        <li><a href="https://maps.app.goo.gl/rK7AozFXygumUXkG8" target="_blank">Localización</a></li>
+                    </ul>
+                </div>
+            </div>
+            <!--Textos legales-->
+            <div class="footer-legal">
+                <p><a href="#">Aviso Legal</a></p>
+                <p><a href="#">Política de privacidad</a></p>
+                <p><a href="#">Política de cookies</a></p>
+                <p><a href="https://creativecommons.org/" target="_blank">(CC) Creative Commons</a></p>
+            </div>
+        </section>
+    </footer>
+
+    <!--Enlaces con JS, llamada a la función de cargar productos al cargar la página-->
+    <script src="js/javascript.js" onload="cargarProducto()"></script>
+</body>
+</html>
